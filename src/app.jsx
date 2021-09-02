@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
+import AsideMenu from "./components/aside_menu/aside_menu";
 import VideoList from "./components/video_list/video_list";
 
 function App({ youtube }) {
@@ -12,9 +13,14 @@ function App({ youtube }) {
   }, [youtube]);
 
   return (
-    <>
-      <VideoList videos={videos} />
-    </>
+    <section className={styles.container}>
+      <aside className={styles.aside}>
+        <AsideMenu />
+      </aside>
+      <div className={styles.content}>
+        <VideoList videos={videos} />
+      </div>
+    </section>
   );
 }
 

@@ -1,0 +1,25 @@
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  padding-top: 20px;
+
+  padding-right: 20px;
+}
+.list {
+  width: 100%;
+  margin: 0 80px 0 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  color: lightslategray;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.list:hover {
+  background-color: rgb(221, 119, 119);
+  color: white;
+}
+.text {
+  margin-left: 10px;
+}
