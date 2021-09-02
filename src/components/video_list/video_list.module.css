@@ -3,5 +3,11 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 48rem) {
+  .videos {
+    justify-content: center;
+  }
 }

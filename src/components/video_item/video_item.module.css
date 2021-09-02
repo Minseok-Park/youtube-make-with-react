@@ -50,3 +50,15 @@
   margin: 0;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 1300px) {
+  .video {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .video {
+    width: 100%;
+  }
+}

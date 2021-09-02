@@ -8,3 +8,6 @@
 .content {
   flex: 1 1 80%;
 }
+.header {
+  width: 100%;
+}

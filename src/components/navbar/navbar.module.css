@@ -1,0 +1,45 @@
+.header {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: yellow;
+  padding: 0.6rem;
+  font-size: 1.4rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 42px;
+}
+.name {
+  margin-left: 5px;
+}
+.input {
+  width: 15rem;
+  height: 40px;
+  border: 0;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  transition: all 0.4s ease;
+}
+.input:active,
+.input:focus {
+  width: 30rem;
+}
+.search {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
