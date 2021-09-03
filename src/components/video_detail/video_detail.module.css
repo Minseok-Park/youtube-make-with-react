@@ -4,6 +4,9 @@
 .container {
   width: 100%;
 }
+.detail_info {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 .detail_content {
   display: flex;
   justify-content: space-between;
@@ -18,6 +21,7 @@
   list-style: none;
   padding: 0;
   display: flex;
+  margin-top: 20px;
 }
 .channel_thumbnail {
   width: 55px;

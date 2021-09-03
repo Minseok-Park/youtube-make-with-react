@@ -29,7 +29,7 @@ const VideoDetail = ({
         ></iframe>
       </div>
 
-      <div className={styles.detail_title}>
+      <div className={styles.detail_info}>
         <h3>{snippet.title}</h3>
         <div className={styles.detail_content}>
           <span>
@@ -42,24 +42,23 @@ const VideoDetail = ({
             <i className={`${styles.detail_icon} fas fa-ellipsis-h`}></i>
           </span>
         </div>
-
-        <ul className={styles.channel}>
-          <li>
-            <img
-              className={styles.channel_thumbnail}
-              src={channelItem.thumbnails.medium.url}
-              alt="채널 썸네일"
-            />
-          </li>
-          <li>
-            <strong>{channelItem.title}</strong>
-            <p>{statistics.subscriberCount}</p>
-            <p>{channelItem.description}</p>
-          </li>
-        </ul>
+        <p>{snippet.description}</p>
       </div>
 
-      <div></div>
+      <ul className={styles.channel}>
+        <li>
+          <img
+            className={styles.channel_thumbnail}
+            src={channelItem.thumbnails.medium.url}
+            alt="채널 썸네일"
+          />
+        </li>
+        <li>
+          <strong>{channelItem.title}</strong>
+          <p>구독자 {statistics.subscriberCount}</p>
+          <p>{channelItem.description}</p>
+        </li>
+      </ul>
     </section>
   );
 };

@@ -17,3 +17,9 @@
 .header {
   width: 100%;
 }
+
+@media screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+  }
+}

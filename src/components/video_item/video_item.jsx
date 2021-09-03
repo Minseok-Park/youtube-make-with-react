@@ -5,7 +5,10 @@ const VideoItem = ({
   video,
   video: { snippet, statistics, channelItem },
   onVideoClick,
+  display,
 }) => {
+  const displayType = display === "list" ? styles.list : "";
+
   const hitCount = () => {
     const count = statistics.viewCount;
 
@@ -15,12 +18,15 @@ const VideoItem = ({
     return count;
   };
   return (
-    <li className={styles.video} onClick={() => onVideoClick(video)}>
-      <figure className={styles.video_img}>
+    <li
+      className={`${styles.video} ${displayType}`}
+      onClick={() => onVideoClick(video)}
+    >
+      <figure className={`${styles.video_img} ${displayType}`}>
         <img
           src={snippet.thumbnails.medium.url}
           alt="유튜브 비디오"
-          className={styles.video_thumbnail}
+          className={`${styles.video_thumbnail} ${displayType}`}
         />
       </figure>
 
@@ -30,13 +36,17 @@ const VideoItem = ({
             <img
               src={channelItem.thumbnails.medium.url}
               alt="채널 썸네일"
-              className={styles.channel_thumbnail}
+              className={`${styles.channel_thumbnail} ${displayType}`}
             />
           </li>
 
           <li className={styles.video_description}>
-            <p className={styles.video_title}>{snippet.title}</p>
-            <p className={styles.video_channelTitle}>{snippet.channelTitle}</p>
+            <p className={`${styles.video_title} ${displayType}`}>
+              {snippet.title}
+            </p>
+            <p className={`${styles.video_channelTitle} ${displayType}`}>
+              {snippet.channelTitle}
+            </p>
             <p className={styles.video_hit}>조회수 {hitCount()}회</p>
           </li>
         </ul>

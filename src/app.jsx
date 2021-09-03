@@ -17,6 +17,7 @@ function App({ youtube }) {
   console.log(selectedVideo);
 
   const search = (query) => {
+    setSelectedVideo(null);
     youtube
       .search(query) //
       .then((videos) => setVideos(videos));
