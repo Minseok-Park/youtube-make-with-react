@@ -7,6 +7,12 @@ import VideoList from "./components/video_list/video_list";
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
 
+  const search = (query) => {
+    youtube
+      .search(query) //
+      .then((videos) => setVideos(videos));
+  };
+
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -14,9 +20,9 @@ function App({ youtube }) {
   }, [youtube]);
 
   return (
-    <>
+    <div className={styles.app}>
       <header className={styles.header}>
-        <Navbar />
+        <Navbar onSearch={search} />
       </header>
       <section className={styles.container}>
         <aside className={styles.aside}>
@@ -26,7 +32,7 @@ function App({ youtube }) {
           <VideoList videos={videos} />
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

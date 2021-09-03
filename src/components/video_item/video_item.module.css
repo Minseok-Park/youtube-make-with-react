@@ -5,6 +5,12 @@
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.video:hover {
+  transform: scale(1.02);
+  background-color: wheat;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.17);
 }
 .video_img {
   margin-left: 20px;
