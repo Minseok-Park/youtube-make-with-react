@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./video_item.module.css";
 
-const VideoItem = ({ video, video: { snippet, statistics, channelItem } }) => {
+const VideoItem = ({
+  video,
+  video: { snippet, statistics, channelItem },
+  onVideoClick,
+}) => {
   const hitCount = () => {
     const count = statistics.viewCount;
 
@@ -11,7 +15,7 @@ const VideoItem = ({ video, video: { snippet, statistics, channelItem } }) => {
     return count;
   };
   return (
-    <li className={styles.video}>
+    <li className={styles.video} onClick={() => onVideoClick(video)}>
       <figure className={styles.video_img}>
         <img
           src={snippet.thumbnails.medium.url}

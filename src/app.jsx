@@ -2,10 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import AsideMenu from "./components/aside_menu/aside_menu";
 import Navbar from "./components/navbar/navar";
+import VideoDetail from "./components/video_detail/video_detail";
 import VideoList from "./components/video_list/video_list";
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const selectVideo = (video) => {
+    setSelectedVideo(video);
+  };
+
+  /* 테스트*/
+  console.log(selectedVideo);
 
   const search = (query) => {
     youtube
@@ -25,11 +34,21 @@ function App({ youtube }) {
         <Navbar onSearch={search} />
       </header>
       <section className={styles.container}>
-        <aside className={styles.aside}>
-          <AsideMenu />
-        </aside>
+        {selectedVideo ? (
+          <div className={styles.detail}>
+            <VideoDetail video={selectedVideo} />
+          </div>
+        ) : (
+          <aside className={styles.aside}>
+            <AsideMenu />
+          </aside>
+        )}
         <div className={styles.content}>
-          <VideoList videos={videos} />
+          <VideoList
+            videos={videos}
+            onVideoClick={selectVideo}
+            display={selectedVideo ? "list" : "grid"}
+          />
         </div>
       </section>
     </div>

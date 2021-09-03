@@ -1,0 +1,27 @@
+.detail {
+  margin: 0 20px;
+}
+.container {
+  width: 100%;
+}
+.detail_content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: rgb(112, 105, 105);
+}
+.detail_icon {
+  margin-left: 60px;
+  font-size: 1.5rem;
+}
+.channel {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.channel_thumbnail {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
