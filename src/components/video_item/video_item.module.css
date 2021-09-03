@@ -104,4 +104,26 @@
   .video {
     width: 100%;
   }
+  .video_img.list {
+    margin: 0;
+    margin-right: 40px;
+  }
+
+  .video_description {
+  }
+
+  .video_thumbnail.list {
+    width: 120px;
+    height: 110px;
+  }
+  .video_title.list {
+    font-size: 0.7rem;
+    line-height: 12px;
+  }
+  .video_channelTitle.list {
+    font-size: 0.6rem;
+  }
+  .video_hit {
+    font-size: 0.65rem;
+  }
 }

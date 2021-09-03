@@ -23,21 +23,23 @@ const Navbar = ({ onSearch }) => {
   return (
     <ul className={styles.header}>
       <li className={styles.navbar}>
-        <i className="fas fa-bars"></i>
+        <i className={`fas fa-bars ${styles.menu}`}></i>
         <a className={styles.logo} href="#">
           <img src="images/logo.png" alt="유튜브 로고" />
           <span className={styles.name}>Youtube</span>
         </a>
-        <input
-          ref={inputRef}
-          type="search"
-          placeholder="검색"
-          className={styles.input}
-          onKeyPress={onKeyPress}
-        />
-        <button type="submit" className={styles.search} onClick={onClick}>
-          <i className="fas fa-search"></i>
-        </button>
+        <div>
+          <input
+            ref={inputRef}
+            type="search"
+            placeholder="검색"
+            className={styles.input}
+            onKeyPress={onKeyPress}
+          />
+          <button type="submit" className={styles.search} onClick={onClick}>
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
       </li>
     </ul>
   );

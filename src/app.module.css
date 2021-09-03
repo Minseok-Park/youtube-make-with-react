@@ -1,6 +1,4 @@
 .app {
-  background-color: #ecd6ec;
-  background-image: linear-gradient(273deg, #ecd6ec 0%, #bfeef5 100%);
 }
 .container {
   display: flex;

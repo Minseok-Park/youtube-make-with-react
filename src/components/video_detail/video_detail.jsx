@@ -19,6 +19,7 @@ const VideoDetail = ({
     <section className={styles.detail}>
       <div className={styles.video_container}>
         <iframe
+          className={styles.video_player}
           type="text/html"
           width="100%"
           height="600px"
@@ -33,7 +34,7 @@ const VideoDetail = ({
         <h3>{snippet.title}</h3>
         <div className={styles.detail_content}>
           <span>
-            조회수 {hitCount()}회 최초 공개 {firstView}
+            조회수 {hitCount()}회 || 최초 공개 {firstView}
           </span>
           <span className={styles.detail_menu}>
             <i className={`${styles.detail_icon} far fa-thumbs-up`}></i>

@@ -27,18 +27,26 @@
   height: 40px;
   border: 0;
   outline: none;
+
   border-radius: 20px;
   padding: 10px;
   transition: all 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.input:active,
-.input:focus {
-  width: 30rem;
-}
+
 .search {
   border: none;
   cursor: pointer;
   background-color: transparent;
   font-size: 1.5rem;
   line-height: 1rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .navbar {
+    flex-direction: column;
+  }
+  .menu {
+    display: none;
+  }
 }
