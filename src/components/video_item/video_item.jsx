@@ -30,7 +30,7 @@ const VideoItem = ({
         />
       </figure>
 
-      <div className={styles.video_container}>
+      <div className={`${styles.video_container} ${displayType}`}>
         <ul className={styles.video_text}>
           <li>
             <img

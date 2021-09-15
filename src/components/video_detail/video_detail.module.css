@@ -16,6 +16,12 @@
 .detail_icon {
   margin-left: 60px;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.detail_icon:hover {
+  color: red;
+  transform: scale(1.1);
 }
 .channel {
   list-style: none;

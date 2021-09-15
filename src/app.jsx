@@ -13,9 +13,6 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
-  /* 테스트*/
-  console.log(selectedVideo);
-
   const search = (query) => {
     setSelectedVideo(null);
     youtube

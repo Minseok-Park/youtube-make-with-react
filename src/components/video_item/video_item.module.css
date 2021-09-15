@@ -15,8 +15,8 @@
 }
 
 .video_img {
-  margin-left: 20px;
   width: 90%;
+  margin-left: 20px;
 }
 .video_thumbnail {
   width: 100%;
@@ -28,7 +28,7 @@
   margin-top: -10px;
 }
 .video_text {
-  width: 85%;
+  width: 90%;
   display: flex;
   list-style: none;
   padding: 0;
@@ -78,11 +78,14 @@
 }
 .video_img.list {
   margin: 0;
-  margin-right: 70px;
   width: 20%;
 }
 .video_thumbnail.list {
   width: 180px;
+}
+.video_container.list {
+  width: 100%;
+  padding-left: 80px;
 }
 .channel_thumbnail.list {
   display: none;
@@ -97,12 +100,14 @@
 @media screen and (max-width: 1300px) {
   .video {
     width: 45%;
+    height: 500px;
   }
 }
 
 @media screen and (max-width: 48rem) {
   .video {
     width: 100%;
+    margin: 0 auto;
   }
   .video_img.list {
     margin: 0;
@@ -115,6 +120,9 @@
   .video_thumbnail.list {
     width: 120px;
     height: 110px;
+  }
+  .video_container.list {
+    padding-left: 10px;
   }
   .video_title.list {
     font-size: 0.7rem;
