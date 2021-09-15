@@ -13,6 +13,7 @@
 
 #API_KEY
 .env
+/env
 
 # misc
 .DS_Store
